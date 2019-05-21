@@ -10,19 +10,20 @@ import Foundation
 
 class SearchResultController {
     
-    let baseURL = URL(string: "https://itunes.apple.com/us/")!
+    let baseURL = URL(string: "https://itunes.apple.com/search")!
     
-    func performSearch(with searchTerm: String, resultType: ResultType, completion: @escaping() -> Void) {
+    func performSearch(with searchTerm: String, resultType: ResultType, completion: @escaping(Error?) -> Void) {
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
-        let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
+        let searchTermQueryItem = URLQueryItem(name: "term", value: searchTerm)
+        let searchTermQueryItem2 = URLQueryItem(name: "entity", value: resultType.rawValue)
         
-        urlComponents?.queryItems = [searchTermQueryItem]
+        urlComponents?.queryItems = [searchTermQueryItem, searchTermQueryItem2]
+        
         
         guard let requestURL = urlComponents?.url else {
             NSLog("Unable to create URL from components")
-            completion()
             return
         }
         
@@ -37,14 +38,12 @@ class SearchResultController {
             
             guard let data = data else {
                 NSLog("No data returned from data task")
+                completion(NSError())
                 return
             }
             
             let jsonDecoder = JSONDecoder()
             do {
-                jsonDecoder.keyDecodingStrategy = .custom({ (CodingKeys) -> CodingKey in
-                    <#code#>
-                })
                 let searchResult = try jsonDecoder.decode(SearchResults.self, from: data)
                 self.searchResults = searchResult.results
                 completion(nil)

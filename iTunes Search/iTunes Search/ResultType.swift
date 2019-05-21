@@ -13,3 +13,5 @@ enum ResultType: String {
     case musicTrack
     case movie
 }
+
+//Switch statements are essential with enums

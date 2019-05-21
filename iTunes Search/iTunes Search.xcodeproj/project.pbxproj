@@ -14,6 +14,7 @@
 		8B0941FF2294914300401C34 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0941FE2294914300401C34 /* SearchResult.swift */; };
 		8B094201229495F400401C34 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B094200229495F400401C34 /* ResultType.swift */; };
 		8B09420322949AA300401C34 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09420222949AA300401C34 /* SearchResultController.swift */; };
+		8B0942062294B02600401C34 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0942052294B02600401C34 /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +24,10 @@
 		8B0941F3229490DC00401C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0941F6229490DC00401C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0941F8229490DC00401C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B0941FE2294914300401C34 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		8B0941FE2294914300401C34 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResult.swift; path = "New Group/SearchResult.swift"; sourceTree = "<group>"; };
 		8B094200229495F400401C34 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		8B09420222949AA300401C34 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		8B0942052294B02600401C34 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				8B0941EC229490D700401C34 /* AppDelegate.swift */,
 				8B0941F0229490D700401C34 /* Main.storyboard */,
+				8B0942052294B02600401C34 /* SearchResultsTableViewController.swift */,
 				8B0941FE2294914300401C34 /* SearchResult.swift */,
 				8B094200229495F400401C34 /* ResultType.swift */,
 				8B09420222949AA300401C34 /* SearchResultController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				8B09420322949AA300401C34 /* SearchResultController.swift in Sources */,
 				8B0941FF2294914300401C34 /* SearchResult.swift in Sources */,
+				8B0942062294B02600401C34 /* SearchResultsTableViewController.swift in Sources */,
 				8B094201229495F400401C34 /* ResultType.swift in Sources */,
 				8B0941ED229490D700401C34 /* AppDelegate.swift in Sources */,
 			);
